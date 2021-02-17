@@ -140,7 +140,7 @@ select {
     circle,
     rgba(215, 215, 215, 1) 22%,
     rgba(199, 199, 199, 1) 100%
-  )
+  );
   border-radius: 1rem;
 }
 
