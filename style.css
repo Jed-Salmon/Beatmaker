@@ -138,9 +138,9 @@ select {
   background: rgb(56, 56, 56);
   background: radial-gradient(
     circle,
-    rgba(75, 75, 75, 1) 22%,
-    rgba(59, 59, 59, 1) 100%
-  );
+    rgba(215, 215, 215, 1) 22%,
+    rgba(199, 199, 199, 1) 100%
+  )
   border-radius: 1rem;
 }
 
