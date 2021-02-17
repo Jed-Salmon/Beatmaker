@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #fefefe;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+.sequencer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1260px;
+  margin-top: 5rem;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+}
+
+/* Pad Colours */
+.kick-pad {
+  background: rgb(162, 210, 255);
+}
+.snare-pad {
+  background: rgb(200, 171, 218);
+}
+.hihat-pad {
+  background: rgb(238, 203, 158);
+}
+.kick-pad.active {
+  background: rgb(77, 169, 255);
+}
+.snare-pad.active {
+  background: rgb(184, 101, 233);
+}
+.hihat-pad.active {
+  background: rgb(255, 180, 82);
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  padding: 1rem;
+  border: none;
+  background: #e6e6e6;
+  color: #111;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.controls button.active,
+.controls button:hover {
+  background: #db4343;
+  color: #fefefe;
+}
+
+.controls h1 {
+  width: 25%;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background: #e6e6e6;
+  color: #111;
+  border: none;
+  cursor: pointer;
+  margin-top: 3rem;
+}
+
+.play.active {
+  background: #db4343;
+  color: #fff;
+}
+
+select {
+  padding: 1rem 1rem 1rem 0.75rem;
+  font-size: 1rem;
+  width: 150px;
+}
+
+.tempo {
+  margin: 2.5rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  -webkit-appearance: none;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+  background: rgb(56, 56, 56);
+  background: radial-gradient(
+    circle,
+    rgba(75, 75, 75, 1) 22%,
+    rgba(59, 59, 59, 1) 100%
+  );
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+@keyframes playTrack {
+  form {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .controls {
+    margin: 0 1rem;
+  }
+  .controls h1 {
+    width: auto;
+    /* margin-right: 2rem; */
+  }
+}
+
+@media screen and (min-width: 1163px) {
+  .kick-pad,
+  .snare-pad,
+  .hihat-pad {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media screen and (min-width: 1035px) {
+  .controls {
+    display: block;
+  }
+}
